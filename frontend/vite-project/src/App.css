@@ -1,0 +1,105 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* これ以降，自分で作成した部分 */
+/* 検索結果とお気に入り登録情報を並べて表示するように指定 */
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* 検索結果とお気に入り登録情報を表示するスペースの指定 */
+.results, .favorites {
+  width: 45%;
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 検索結果を縦にリストとして表示するように指定 */
+.book-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 各本情報の表示形式の指定 */
+.book-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* 本の表紙画像の表示サイズを指定 */
+.book-image {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* 本のタイトルと著者のテキストフォーマットの指定 */
+.book-info {
+  text-align: left;
+}
+
+/* book-info内に含まれる<h2>タグ部分のテキストフォントサイズの指定 */
+.book-info h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* book-info内に含まれる<p>タグ部分のテキストカラーの指定 */
+.book-info p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* お気に入り登録ボタン(星型ボタン)のサイズと色の指定 */
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: gold;
+  margin-left: 10px;
+}
